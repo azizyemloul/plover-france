@@ -23,25 +23,13 @@
 # K M F R L   E U l $ C Q
 #         L Y E
 
-# The supplementary Z and Q and the doubled L and E are there to keep
-# the integrity of the original sidewinder.py which is the template of
-# this file. Thanks to the developpers.
+# The supplementary Z and Q and the doubled L and E keys are there to
+# keep the integrity of the original sidewinder.py which is the
+# template of this file. Thanks to the developpers.
 
 # The supplementary L and E keys give a less stressing home position
-# for thumbs.
-
-# Please considere that AZERTY is the default pc keyboard layout in France
-# and Belgium.
-
-# A Z E R T   Y U I O P ^
-# Q S D F G   H J K L M %
-#         V B N
-
-# The keys labeled 'M', '^' and '%' in Azerty layout send the same
-# "scan code" (excuse for the approximation) as ';', '[' and ','
-# respectively in Qwerty. It's not the same way with the keys labeled
-# 'A' and 'Q'. Maybe I'm wrong.
-
+# for thumbs and are welcome. Z and Q can give more extensibility to
+# the originale method and they don't hurts further.
 
 from plover.machine.base import StenotypeBase
 from plover.oslayer import keyboardcontrol
@@ -151,8 +139,8 @@ class Stenotype(StenotypeBase):
 
         # A stroke is complete if all pressed keys have been released.
         # If we are in arpeggiate mode then only send stroke when spacebar is pressed.
-        send_strokes = (self._down_keys and
-                        self._down_keys == self._released_keys)
+        send_strokes = bool(self._down_keys and
+                            self._down_keys == self._released_keys)
         if self.arpeggiate:
             send_strokes &= event.keystring == ' '
         if send_strokes:

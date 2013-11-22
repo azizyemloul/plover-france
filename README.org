@@ -23,6 +23,7 @@ sténotypie produites aux États-Unis :
 - Treal
 - Passport
 
+*** Plover-France
 Plover-France est une tentative pour faire fonctionner Plover avec un
 clavier de sténotypie français, dit Grandjean, du nom de son
 concepteur, dont la disposition schématique est la suivante :

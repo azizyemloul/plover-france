@@ -14,7 +14,7 @@ Un clavier offrant la technologie n-key rollover est nécessaire pour
 faire fonctionner Plover de manière optimale, le plus accessible
 étant le ~Microsoft SideWinder X4~.
 
-Plover supporte également un certain nombre de modèles de machines de
+Plover supporte également un certain nombre de protocoles de machines de
 sténotypie produites aux États-Unis :
 
 - Gemini PR (alias Gemini Enhanced)

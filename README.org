@@ -1,0 +1,19 @@
+* Plover: Logiciel de sténotypie Open Source
+Plover est un projet de logiciel informatique open source impulsé aux
+États-Unis par Mirabai Knight, sténotypistes, Joshua Harlan Lifton et
+Hesky Fisher, programmeurs infomraticiens.
+
+Plover donne la possibilité d'utiliser un clavier d'ordinateur pour
+effectuer les accords nécessaires à cette méthode de saisie.
+
+Cependant, les claviers d'ordinateurs traditionnels ne sont
+compatibles que de manière partielle.
+
+Pour utiliser Plover de manière optimale, un clavier offrant la
+technologie n-key rollover est nécessaire, le plus accessible étant le
+~Microsoft SideWinder X4~.
+
+Le fichier d'information original du projet, en anglais, est dénommé
+_README.rst.
+
+Ceci n'est qu'une présentation très succinct du projet en français.

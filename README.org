@@ -15,7 +15,7 @@ faire fonctionner Plover de manière optimale, le plus accessible
 étant le ~Microsoft SideWinder X4~.
 
 Plover supporte également un certain nombre de modèles de machines de
-sténotypie produites aux États-Unis :
+sténotypie produites aux États-Unis :
 
 - Gemini PR (alias Gemini Enhanced)
 - TX Bolt (alias Gemini TX)
@@ -25,7 +25,7 @@ sténotypie produites aux États-Unis :
 
 Plover-France est une tentative pour faire fonctionner Plover avec un
 clavier de sténotypie français sur le modèle Grandjean dont la
-disposition schématique est la suivante :
+disposition schématique est la suivante :
 
 | S | P | T | * | N |   | O | A | I | n | D |
 | K | M | F | R | L | Y | E | U | l | $ | C |
@@ -34,11 +34,15 @@ Le projet Plover original ne prend en charge, pour l'instant, que la
 disposition dite de Ward Stone Ireland.
 
 Le fichier d'information original du projet, en anglais, est dénommé
-_README.rst.
+[[https://github.com/azizyemloul/plover-france/blob/master/_README.rst][_README.rst]].
+
 
 Wiki http://stenoknight.com/wiki/Main_Page
+
 Forum http://stenoknight.com/plover/aviary/phpBB3/
+
 Blog http://plover.stenoknight.com/
+
 Liste de discussion https://groups.google.com/forum/#!forum/ploversteno
 
 

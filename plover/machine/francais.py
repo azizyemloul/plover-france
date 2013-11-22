@@ -8,6 +8,41 @@
 
 # TODO: Change name to NKRO Keyboard.
 
+# ABOUT francais.py:
+
+# francais.py is not part of Plover. It's a try to mime the french
+# Marc Grandjean Keyboard layout, a 21 keys keyboard.
+
+# S P T * N   O A I n D
+# K M F R L   E U l $ C
+#           Y
+
+# Plover can handle 24 keys. Then :
+
+# S P T * N   O A I n D Z
+# K M F R L   E U l $ C Q
+#         L Y E
+
+# The supplementary Z and Q and the doubled L and E are there to keep
+# the integrity of the original sidewinder.py which is the template of
+# this file. Thanks to the developpers.
+
+# The supplementary L and E keys give a less stressing home position
+# for thumbs.
+
+# Please considere that AZERTY is the default pc keyboard layout in France
+# and Belgium.
+
+# A Z E R T   Y U I O P ^
+# Q S D F G   H J K L M %
+#         V B N
+
+# The keys labeled 'M', '^' and '%' in Azerty layout send the same
+# "scan code" (excuse for the approximation) as ';', '[' and ','
+# respectively in Qwerty. It's not the same way with the keys labeled
+# 'A' and 'Q'. Maybe I'm wrong.
+
+
 from plover.machine.base import StenotypeBase
 from plover.oslayer import keyboardcontrol
 

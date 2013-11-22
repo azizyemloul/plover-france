@@ -1,7 +1,7 @@
 *** Plover: Logiciel de sténotypie Open Source
-Plover est un projet de logiciel informatique open source impulsé aux
-États-Unis par Mirabai Knight, sténotypiste, Joshua Harlan Lifton et
-Hesky Fisher, programmeurs informatiques.
+Plover est un projet de logiciel informatique libre impulsé aux
+États-Unis par la sténotypiste *Mirabai Knight* et les programmeurs
+informatiques *Joshua Harlan Lifton* et *Hesky Fisher*.
 
 Plover permet d'utiliser un clavier d'ordinateur pour
 effectuer les accords nécessaires à cette méthode de saisie.
@@ -20,7 +20,7 @@ sténotypie produites aux États-Unis :
 - Stentura
 - Treal
 - Passport
-*** Plover-France
+*** Plover-France :
 Plover-France est une tentative pour faire fonctionner Plover avec un
 clavier de sténotypie français - dit Grandjean, du nom de son
 concepteur - dont la disposition schématique est la suivante :
@@ -50,5 +50,11 @@ suivants, en anglais :
 #  LocalWords:  Plover Mirabai Knight Joshua Harlan Lifton Hesky PR
 #  LocalWords:  Fisher n-key rollover README.rst Stentura Gemini TX
 #  LocalWords:  Enhanced Bolt Treal Passport Plover-France Grandjean
-#  LocalWords:  blog wiki
+#  LocalWords:  blog wiki orthography.py steno.py LocalWords
 *** Historique des interventions sur le code original
+- Ajout d'un clavier français
+- Changement de steno.py, coeur du logiciel pour accepter les accords français.
+*** TODO Reste à faire :
+- Changer orthography.py pour prendre en charge les règles orthographiques françaises.
+- Mettre en place le dictionnaire
+- Étudier les suffixes et les préfixes dans le dictionnaire.

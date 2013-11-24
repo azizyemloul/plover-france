@@ -25,16 +25,17 @@ Plover-France est une tentative pour faire fonctionner Plover avec un
 clavier de sténotypie français - dit Grandjean, du nom de son
 concepteur - dont la disposition schématique est la suivante :
 
-| S | P | T | * | N |   | O | A | I | n | D |
-| K | M | F | R | L | Y | E | U | l | $ | C |
+| S | P | T | * | N |   | O | A | I | ᴎ | D |
+| K | M | F | R | L |   | E | U | Ł | $ | C |
+|   |   |   |   |   | Y |   |   |   |   |   |
 
 Le projet Plover original ne prend en charge, pour l'instant, que la
 disposition dite de ~Ward Stone Ireland~ schématisée dans le tableau
 suivant :
 
-| S | T | P | H | * | F | P | L | T | D |
-| S | K | W | R | * | R | B | G | S | Z |
-|   |   |   | A | O | E | U |   |   |   |
+| S | T | P | H | * |   | F | P | L | T | D |
+| S | K | W | R | * |   | R | B | G | S | Z |
+|   |   |   | A | O |   | E | U |   |   |   |
 
 
 Le fichier d'information original du projet, en anglais, est dénommé

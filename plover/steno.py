@@ -5,12 +5,10 @@
 
 # PLOVER-FRANCE Modifications:
 # ----------------------------
-# This file is a modified version of the original steno.py that try to
+# This file is a modified version of the original steno.py. Trying to
 # handle the Marc Grandjean french layout.
 #
-# IMPLICIT_HYPHENS and IMPLICIT_HYPHEN are set to the key 'Y'. I kept
-# the same datatype since it works. It could be better done but I dont
-# know enought programming.
+# IMPLICIT_HYPHENS and IMPLICIT_HYPHEN are set to the key 'Y'.
 #
 # The CORRECTION STROKE in french stenography is "-Ul$C", the
 # four right fingers pressing all together on the home position.
@@ -54,7 +52,7 @@ STENO_KEY_NUMBERS = {'S-': '1-',
                      '-O': '-6',
                      '-A': '-7',
                      '-I': '-8',
-                     '-n': '-9'}
+                     '-ᴎ': '-9'}
 
 STENO_KEY_ORDER = {"S-": 0,
                    "K-": 1,
@@ -72,13 +70,11 @@ STENO_KEY_ORDER = {"S-": 0,
                    "-A": 13,
                    "-U": 14,
                    "-I": 15,
-                   "-l": 16,
-                   "-n": 17,
+                   "-Ł": 16,
+                   "-ᴎ": 17,
                    "-$": 18,
                    "-D": 19,
-                   "-C": 20,
-                   "-Z": 21,
-                   "-Q": 22}
+                   "-C": 20}
 
 
 class Stroke:

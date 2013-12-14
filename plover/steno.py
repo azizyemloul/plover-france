@@ -3,6 +3,14 @@
 
 # TODO: unit test this file
 
+# PLOVER-FRANCE Modifications:
+# ----------------------------
+# This file is a modified version of the original steno.py. Trying to
+# handle the Marc Grandjean, called 'V' french layout.
+# 
+# The CORRECTION STROKE in french stenography is "-Ul$C", the
+# four right fingers pressing all together on the home position.
+
 """Generic stenography data models.
 
 This module contains the following class:
@@ -14,7 +22,7 @@ Stroke -- A data model class that encapsulates a sequence of steno keys.
 import re
 
 STROKE_DELIMITER = '/'
-IMPLICIT_HYPHENS = set('AOEU*50')
+IMPLICIT_HYPHENS = set('YOEAUIn$DC')
 
 def normalize_steno(strokes_string):
     """Convert steno strings to one common form."""
@@ -34,39 +42,37 @@ def normalize_steno(strokes_string):
     return tuple(normalized_strokes)
 
 STENO_KEY_NUMBERS = {'S-': '1-',
-                     'T-': '2-',
-                     'P-': '3-',
-                     'H-': '4-',
-                     'A-': '5-',
-                     'O-': '0-',
-                     '-F': '-6',
-                     '-P': '-7',
-                     '-L': '-8',
-                     '-T': '-9'}
+                     'P-': '2-',
+                     'T-': '3-',
+                     '*-': '4-',
+                     'N-': '5-',
+                     'Y-': '0-',
+                     '-O': '-6',
+                     '-A': '-7',
+                     '-I': '-8',
+                     '-n': '-9'}
 
-STENO_KEY_ORDER = {"#": 0,
-                   "S-": 1,
-                   "T-": 2,
-                   "K-": 3,
-                   "P-": 4,
-                   "W-": 5,
-                   "H-": 6,
+STENO_KEY_ORDER = {"S-": 0,
+                   "K-": 1,
+                   "P-": 2,
+                   "M-": 3,
+                   "T-": 4,
+                   "F-": 5,
+                   "*-": 6,
                    "R-": 7,
-                   "A-": 8,
-                   "O-": 9,
-                   "*": 10,
-                   "-E": 11,
-                   "-U": 12,
-                   "-F": 13,
-                   "-R": 14,
-                   "-P": 15,
-                   "-B": 16,
-                   "-L": 17,
-                   "-G": 18,
-                   "-T": 19,
-                   "-S": 20,
-                   "-D": 21,
-                   "-Z": 22}
+                   "N-": 8,
+                   "L-": 9,
+                   "Y-": 10,
+                   "-O": 11,
+                   "-E": 12,
+                   "-A": 13,
+                   "-U": 14,
+                   "-I": 15,
+                   "-l": 16,
+                   "-n": 17,
+                   "-$": 18,
+                   "-D": 19,
+                   "-C": 20}
 
 
 class Stroke:
@@ -82,7 +88,7 @@ class Stroke:
 
     """
 
-    IMPLICIT_HYPHEN = set(('A-', 'O-', '5-', '0-', '-E', '-U', '*'))
+    IMPLICIT_HYPHEN = set(('Y-', '-O', '-E', '-A', '-U', '-I', '-l', '-n', '-$', '-D', '-C'))
 
     def __init__(self, steno_keys) :
         """Create a steno stroke by formatting steno keys.
@@ -92,14 +98,14 @@ class Stroke:
         steno_keys -- A sequence of pressed keys.
 
         """
-        # Remove duplicate keys and save local versions of the input 
+        # Remove duplicate keys and save local versions of the input
         # parameters.
         steno_keys_set = set(steno_keys)
         steno_keys = list(steno_keys_set)
 
         # Order the steno keys so comparisons can be made.
         steno_keys.sort(key=lambda x: STENO_KEY_ORDER.get(x, -1))
-         
+
         # Convert strokes involving the number bar to numbers.
         if '#' in steno_keys:
             numeral = False
@@ -109,11 +115,11 @@ class Stroke:
                     numeral = True
             if numeral:
                 steno_keys.remove('#')
-        
+
         if steno_keys_set & self.IMPLICIT_HYPHEN:
             self.rtfcre = ''.join(key.strip('-') for key in steno_keys)
         else:
-            pre = ''.join(k.strip('-') for k in steno_keys if k[-1] == '-' or 
+            pre = ''.join(k.strip('-') for k in steno_keys if k[-1] == '-' or
                           k == '#')
             post = ''.join(k.strip('-') for k in steno_keys if k[0] == '-')
             self.rtfcre = '-'.join([pre, post]) if post else pre
@@ -121,11 +127,11 @@ class Stroke:
         self.steno_keys = steno_keys
 
         # Determine if this stroke is a correction stroke.
-        self.is_correction = (self.rtfcre == '*')
+        self.is_correction = (self.rtfcre == 'Ul$C')
 
     def __str__(self):
         if self.is_correction:
-            prefix = '*'
+            prefix = 'Ul$C'
         else:
             prefix = ''
         return '%sStroke(%s : %s)' % (prefix, self.rtfcre, self.steno_keys)
@@ -139,4 +145,3 @@ class Stroke:
 
     def __repr__(self):
         return str(self)
-

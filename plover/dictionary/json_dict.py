@@ -27,7 +27,7 @@ def load_dictionary(data):
         except UnicodeDecodeError:
             return json.loads(data, 'latin-1', object_pairs_hook=h)
     except ValueError:
-        raise DictionaryLoaderException('Dictionary is not valid json.')
+        raise DictionaryLoaderException('Le dictionnaire n\'est pas un json valide. Reportez vous à la documentation')
         
 # TODO: test this
 def save_dictionary(d, fp):

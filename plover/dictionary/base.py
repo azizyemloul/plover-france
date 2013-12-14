@@ -29,7 +29,7 @@ def load_dictionary(filename):
         dict_type = dictionaries[extension]
     except KeyError:
         raise DictionaryLoaderException(
-            'Unsupported extension for dictionary: %s. Supported extensions: %s' %
+            'Cette extension n\'est pas supportée pour le dictionnaire: %s. Extensions supportées: %s' %
             (extension, ', '.join(dictionaries.keys())))
 
     loader = dict_type.load_dictionary

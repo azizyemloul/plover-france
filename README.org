@@ -1,3 +1,27 @@
+#+BEGIN_EXAMPLE
+  ___                                           ___
+ | S |___                                   ___| D |
+ |___| P |___                           ___| ᴎ |___|
+ | K |___| T |___                   ___| I |___| C |
+ |___| M |___| * |___     _     ___| A |___| $ |___|
+     |___| F |___| N |   / \   | O |___| Ł |___|
+         |___| R |___|  /   \  |___| U |___|
+             |___| L | /  Y  \ | E |___|
+                 |___||       ||___|
+                       \_____/
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+ _____ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ _____
+|TAB  | S | P | T | * | L |   | O | A | I | ᴎ | D |   |Enter|
+|_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
+|MAJ   |K  |M  |F  |R  |L  |Y  |E  |U  |Ł  |$  |C  |   |  ⏎ |
+|______|___|___|___|___|___|___|___|___|___|___|___|___|____|
+| ⇧  |   |   |   |   |  L|  Y|  E|   |   |   |   |⇧         |
+|____|___|___|___|___|___|___|___|___|___|___|___|__________|
+#+END_EXAMPLE
+
+
 *** Plover: Logiciel libre de sténotypie
 Plover est un projet informatique libre impulsé aux États-Unis par la
 sténotypiste *Mirabai Knight* et les programmeurs informatiques
@@ -25,9 +49,9 @@ Plover-France est une tentative pour faire fonctionner Plover avec un
 clavier de sténotypie français - dit Grandjean, du nom de son
 concepteur - dont la disposition schématique est la suivante :
 
-| S | P | T | * | N |   | O | A | I | ᴎ | D |
-| K | M | F | R | L |   | E | U | Ł | $ | C |
-|   |   |   |   |   | Y |   |   |   |   |   |
+|  S  |  P  |  T  |  *  |  N  |     |  O  |  A  |  I  |  ᴎ  |  D  |
+|  K  |  M  |  F  |  R  |  L  |  Y  |  E  |  U  |  Ł  |  $  |  C  |
+|     |     |     |     | *L* | *Y* | *E* |     |     |     |     |
 
 Le projet Plover original ne prend en charge, pour l'instant, que la
 disposition dite de ~Ward Stone Ireland~ schématisée dans le tableau
@@ -54,8 +78,9 @@ suivants, en anglais :
 #  LocalWords:  blog wiki orthography.py steno.py LocalWords
 *** Historique des interventions sur le code original
 - Ajout d'un clavier français <2013-11-22 ven.>
-- Changement de ~steno.py~, coeur du logiciel pour accepter les accords français. <2013-11-22 ven.>
+- Changement de ~steno.py~, coeur du logiciel pour accepter les accords en français. <2013-11-22 ven.>
+- Changements expérimentaux sur orthography.py. <2013-11-28 jeu.>.
 *** TODO Reste à faire :
-- Changer orthography.py pour prendre en charge les règles orthographiques françaises.
+- Améliorer orthography.py pour prendre en charge les règles orthographiques françaises.
 - Mettre en place le dictionnaire
 - Étudier les suffixes et les préfixes dans le dictionnaire.

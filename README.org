@@ -1,26 +1,23 @@
 #+BEGIN_EXAMPLE
-  ___                                           ___
- | S |___                                   ___| D |
- |___| P |___                           ___| ᴎ |___|
- | K |___| T |___                   ___| I |___| C |
- |___| M |___| * |___     _     ___| A |___| $ |___|
-     |___| F |___| N |   / \   | O |___| Ł |___|
-         |___| R |___|  /   \  |___| U |___|
-             |___| L | /  Y  \ | E |___|
-                 |___||       ||___|
-                       \_____/
-#+END_EXAMPLE
+                  ___                                           ___
+                 | S |___                                   ___| D |
+                 |___| P |___                           ___| ᴎ |___|
+                 | K |___| T |___                   ___| I |___| C |
+                 |___| M |___| * |___     _     ___| A |___| $ |___|
+                     |___| F |___| N |   / \   | O |___| Ł |___|
+                         |___| R |___|  /   \  |___| U |___|
+                             |___| L | /  Y  \ | E |___|
+                                 |___||       ||___|
+                                       \_____/
 
-#+BEGIN_EXAMPLE
- _____ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ _____
-|TAB  | S | P | T | * | L |   | O | A | I | ᴎ | D |   |Enter|
-|_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
-|MAJ   |K  |M  |F  |R  |L  |Y  |E  |U  |Ł  |$  |C  |   |  ⏎ |
-|______|___|___|___|___|___|___|___|___|___|___|___|___|____|
-| ⇧  |   |   |   |   |  L|  Y|  E|   |   |   |   |⇧         |
-|____|___|___|___|___|___|___|___|___|___|___|___|__________|
+               ___________________________________________________________
+              |TAB  | S | P | T | * | N |   |  O|  A|  I|  ᴎ|  D|   |Enter|
+              |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
+              |MAJ   |K  |M  |F  |R  |L  | Y | E | U | Ł | $ | C |   |  ⏎ |
+              |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
+              | ⇧  |   |   |   |   |  L|  Y|Y  |E  |   |   |   |⇧         |
+              |____|___|___|___|___|___|___|___|___|___|___|___|__________|
 #+END_EXAMPLE
-
 
 *** Plover: Logiciel libre de sténotypie
 Plover est un projet informatique libre impulsé aux États-Unis par la
@@ -44,23 +41,59 @@ sténotypie produites aux États-Unis :
 - Stentura
 - Treal
 - Passport
+
 *** Plover-France :
-Plover-France est une tentative pour faire fonctionner Plover avec un
-clavier de sténotypie français - dit Grandjean, du nom de son
-concepteur - dont la disposition schématique est la suivante :
+Plover-France est une tente de faire fonctionner Plover avec un
+clavier de sténotypie français, dit Grandjean, du nom de son
+concepteur et dont la disposition schématique est la suivante :
+#+BEGIN_EXAMPLE
+             ___                                           ___
+            | S |___                                   ___| D |
+            |___| P |___                           ___| ᴎ |___|
+            | K |___| T |___                   ___| I |___| C |
+            |___| M |___| * |___     _     ___| A |___| $ |___|
+                |___| F |___| N |   / \   | O |___| Ł |___|
+                    |___| R |___|  /   \  |___| U |___|
+                        |___| L | /  Y  \ | E |___|
+                            |___||       ||___|
+                                  \_____/
+#+END_EXAMPLE
 
-|  S  |  P  |  T  |  *  |  N  |     |  O  |  A  |  I  |  ᴎ  |  D  |
-|  K  |  M  |  F  |  R  |  L  |  Y  |  E  |  U  |  Ł  |  $  |  C  |
-|     |     |     |     | *L* | *Y* | *E* |     |     |     |     |
+Le clavier Grandjean est disposé en V. Les touches des claviers
+d'ordinateurs standards sont disposés horizontalement. Une première
+approche aurait été de projeter le clavier du sténotype sur deux
+lignes de touches, ce qui nous aurait offert la disposition suivante :
 
-Le projet Plover original ne prend en charge, pour l'instant, que la
-disposition dite de ~Ward Stone Ireland~, schématisée dans le tableau
-suivant :
+#+BEGIN_EXAMPLE
+         ___________________________________________________________
+        |TAB  |  S|  P|  T|  *|  N|   |  O|  A|  I|  ᴎ|  D|   |Enter|
+        |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
+        |MAJ   | K | M | F | R | L | Y | E | U | Ł | $ | C |   |  ⏎ |
+        |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
+        | ⇧  |   |   |   |   |   |   |   |   |   |   |   |⇧         |
+        |____|___|___|___|___|___|___|___|___|___|___|___|__________|
+#+END_EXAMPLE
 
-| S | T | P | H | * |   | F | P | L | T | D |
-| S | K | W | R | * |   | R | B | G | S | Z |
-|   |   |   | A | O |   | E | U |   |   |   |
+Cette disposition est inconfortable car les pouces doivent rester sur
+leurs touches de départ que sont les L et Y.
 
+Le clavier du sténotype de Marc Grandjean est disposé en V afin de
+permettre justement aux pouces de résider sur leurs touches de départ
+dans une position accommodante.
+
+C'est le cas également avec la disposition de Ward Stone Ireland
+utilisée pour l'anglais.
+
+La disposition choisie pour le clavier Grandjean sera finalement la suivante :
+#+BEGIN_EXAMPLE
+             ___________________________________________________________
+            |TAB  | S | P | T | * | N |   |  O|  A|  I|  ᴎ|  D|   |Enter|
+            |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
+            |MAJ   |K  |M  |F  |R  |L  | Y | E | U | Ł | $ | C |   |  ⏎ |
+            |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
+            | ⇧  |   |   |   |   |  L|  Y|Y  |E  |   |   |   |⇧         |
+            |____|___|___|___|___|___|___|___|___|___|___|___|__________|
+#+END_EXAMPLE
 
 Le fichier d'information original du projet, en anglais, est dénommé
 [[https://github.com/azizyemloul/plover-france/blob/master/_README.rst][_README.rst]].

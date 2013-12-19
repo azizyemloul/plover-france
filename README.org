@@ -95,6 +95,11 @@ La disposition choisie pour le clavier Grandjean sera finalement la suivante :
             |____|___|___|___|___|___|___|___|___|___|___|___|__________|
 #+END_EXAMPLE
 
+Il y en aurait ainsi pour tous les goûts. Pour les rigoristes et pour
+ceux qui, comme moi, trouvent que la sténotypie, c'est sympa mais
+qu'il n y a pas de quoi se tordre les doigts.
+
+
 Le fichier d'information original du projet, en anglais, est dénommé
 [[https://github.com/azizyemloul/plover-france/blob/master/_README.rst][_README.rst]].
 

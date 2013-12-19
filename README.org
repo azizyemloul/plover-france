@@ -75,7 +75,7 @@ lignes de touches, ce qui nous aurait offert la disposition suivante :
 #+END_EXAMPLE
 
 Cette disposition est inconfortable car les pouces doivent rester sur
-leurs touches de départ que sont les L et Y.
+leurs touches de départ que sont ~L~ et ~Y~.
 
 Le clavier du sténotype de Marc Grandjean est disposé en V afin de
 permettre justement aux pouces de résider sur leurs touches de départ
@@ -96,11 +96,10 @@ La disposition choisie pour le clavier Grandjean sera finalement la suivante :
 #+END_EXAMPLE
 
 Il y en aurait ainsi pour tous les goûts. Pour les rigoristes et pour
-ceux qui, comme moi, trouvent que la sténotypie, c'est sympa mais
+ceux qui, comme moi, trouvent que la sténotypie, c'est sympa, mais
 qu'il n y a pas de quoi se tordre les doigts.
 
-
-Le fichier d'information original du projet, en anglais, est dénommé
+Le fichier d'information original du projet Plover, en anglais, est dénommé
 [[https://github.com/azizyemloul/plover-france/blob/master/_README.rst][_README.rst]].
 
 Veuillez vous y rapportez pour plus d'informations, ainsi qu'aux sites

@@ -54,7 +54,7 @@ concepteur - dont la disposition schématique est la suivante :
 |     |     |     |     | *L* | *Y* | *E* |     |     |     |     |
 
 Le projet Plover original ne prend en charge, pour l'instant, que la
-disposition dite de ~Ward Stone Ireland~ schématisée dans le tableau
+disposition dite de ~Ward Stone Ireland~, schématisée dans le tableau
 suivant :
 
 | S | T | P | H | * |   | F | P | L | T | D |

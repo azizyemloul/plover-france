@@ -43,9 +43,9 @@ sténotypie produites aux États-Unis :
 - Passport
 
 *** Plover-France :
-Plover-France est une tente de faire fonctionner Plover avec un
-clavier de sténotypie français, dit Grandjean, du nom de son
-concepteur et dont la disposition schématique est la suivante :
+Plover-France fait fonctionner Plover avec un clavier de sténotypie
+français, dit Grandjean, du nom de son concepteur et dont la
+disposition schématique est la suivante :
 #+BEGIN_EXAMPLE
              ___                                           ___
             | S |___                                   ___| D |
@@ -75,10 +75,10 @@ lignes de touches, ce qui nous aurait offert la disposition suivante :
 #+END_EXAMPLE
 
 Cette disposition est inconfortable car les pouces doivent rester sur
-leurs touches de départ que sont ~L~ et ~Y~.
+leurs touches de départ que sont ~L~ et ~E~.
 
-Le clavier du sténotype de Marc Grandjean est disposé en V afin de
-permettre justement aux pouces de résider sur leurs touches de départ
+Le clavier du sténotype Marc Grandjean est disposé en V afin de
+permettre aux pouces de résider sur leurs touches de départ
 dans une position accommodante.
 
 C'est le cas également avec la disposition de Ward Stone Ireland
@@ -97,10 +97,10 @@ La disposition choisie pour le clavier Grandjean sera finalement la suivante :
 
 Il y en aurait ainsi pour tous les goûts. Pour les rigoristes et pour
 ceux qui, comme moi, trouvent que la sténotypie, c'est sympa, mais
-qu'il n y a pas de quoi se tordre les doigts.
+qu'il n y a pas de quoi se faire mal.
 
 Le fichier d'information original du projet Plover, en anglais, est dénommé
-[[https://github.com/azizyemloul/plover-france/blob/master/_README.rst][_README.rst]].
+[[./_README.rst][_README.rst]].
 
 Veuillez vous y rapportez pour plus d'informations, ainsi qu'aux sites
 suivants, en anglais :
@@ -117,7 +117,7 @@ suivants, en anglais :
 - Ajout d'un clavier français <2013-11-22 ven.>
 - Changement de ~steno.py~, coeur du logiciel pour accepter les accords en français. <2013-11-22 ven.>
 - Changements expérimentaux sur orthography.py. <2013-11-28 jeu.>.
-*** TODO Reste à faire :
+*** Reste à faire :
 - Améliorer orthography.py pour prendre en charge les règles orthographiques françaises.
 - Mettre en place le dictionnaire
 - Étudier les suffixes et les préfixes dans le dictionnaire.

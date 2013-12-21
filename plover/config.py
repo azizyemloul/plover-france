@@ -20,7 +20,7 @@ CONFIG_FILE = os.path.join(CONFIG_DIR, 'plover.cfg')
 # General configuration sections, options and defaults.
 MACHINE_CONFIG_SECTION = 'Machine Configuration'
 MACHINE_TYPE_OPTION = 'machine_type'
-DEFAULT_MACHINE_TYPE = 'NKRO Keyboard'
+DEFAULT_MACHINE_TYPE = 'Disposition Marc Grandjean'
 MACHINE_AUTO_START_OPTION = 'auto_start'
 DEFAULT_MACHINE_AUTO_START = False
 
@@ -120,11 +120,11 @@ class Config(object):
         return c
 
     def set_machine_type(self, machine_type):
-        self._set(MACHINE_CONFIG_SECTION, MACHINE_TYPE_OPTION, 
+        self._set(MACHINE_CONFIG_SECTION, MACHINE_TYPE_OPTION,
                          machine_type)
 
     def get_machine_type(self):
-        return self._get(MACHINE_CONFIG_SECTION, MACHINE_TYPE_OPTION, 
+        return self._get(MACHINE_CONFIG_SECTION, MACHINE_TYPE_OPTION,
                          DEFAULT_MACHINE_TYPE)
 
     def set_machine_specific_options(self, machine_name, options):
@@ -144,7 +144,7 @@ class Config(object):
         info = machine.get_option_info()
         defaults = {k: v[0] for k, v in info.items()}
         if self._config.has_section(machine_name):
-            options = {o: self._config.get(machine_name, o) 
+            options = {o: self._config.get(machine_name, o)
                        for o in self._config.options(machine_name)
                        if o in info}
             options = {k: convert(info[k], v) for k, v in options.items()}
@@ -165,7 +165,7 @@ class Config(object):
             options = filter(lambda x: x.startswith(DICTIONARY_FILE_OPTION),
                              self._config.options(DICTIONARY_CONFIG_SECTION))
             options.sort(key=_dict_entry_key)
-            filenames = [self._config.get(DICTIONARY_CONFIG_SECTION, o) 
+            filenames = [self._config.get(DICTIONARY_CONFIG_SECTION, o)
                          for o in options]
         if not filenames or filenames == ['dict.json']:
             filenames = [DEFAULT_DICTIONARY_FILE]
@@ -175,77 +175,77 @@ class Config(object):
         self._set(LOGGING_CONFIG_SECTION, LOG_FILE_OPTION, filename)
 
     def get_log_file_name(self):
-        return self._get(LOGGING_CONFIG_SECTION, LOG_FILE_OPTION, 
+        return self._get(LOGGING_CONFIG_SECTION, LOG_FILE_OPTION,
                          DEFAULT_LOG_FILE)
 
     def set_enable_stroke_logging(self, log):
         self._set(LOGGING_CONFIG_SECTION, ENABLE_STROKE_LOGGING_OPTION, log)
 
     def get_enable_stroke_logging(self):
-        return self._get_bool(LOGGING_CONFIG_SECTION, 
-                              ENABLE_STROKE_LOGGING_OPTION, 
+        return self._get_bool(LOGGING_CONFIG_SECTION,
+                              ENABLE_STROKE_LOGGING_OPTION,
                               DEFAULT_ENABLE_STROKE_LOGGING)
 
     def set_enable_translation_logging(self, log):
       self._set(LOGGING_CONFIG_SECTION, ENABLE_TRANSLATION_LOGGING_OPTION, log)
 
     def get_enable_translation_logging(self):
-        return self._get_bool(LOGGING_CONFIG_SECTION, 
-                              ENABLE_TRANSLATION_LOGGING_OPTION, 
+        return self._get_bool(LOGGING_CONFIG_SECTION,
+                              ENABLE_TRANSLATION_LOGGING_OPTION,
                               DEFAULT_ENABLE_TRANSLATION_LOGGING)
 
     def set_auto_start(self, b):
         self._set(MACHINE_CONFIG_SECTION, MACHINE_AUTO_START_OPTION, b)
 
     def get_auto_start(self):
-        return self._get_bool(MACHINE_CONFIG_SECTION, MACHINE_AUTO_START_OPTION, 
+        return self._get_bool(MACHINE_CONFIG_SECTION, MACHINE_AUTO_START_OPTION,
                               DEFAULT_MACHINE_AUTO_START)
 
     def set_show_stroke_display(self, b):
         self._set(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_SHOW_OPTION, b)
 
     def get_show_stroke_display(self):
-        return self._get_bool(STROKE_DISPLAY_SECTION, 
+        return self._get_bool(STROKE_DISPLAY_SECTION,
             STROKE_DISPLAY_SHOW_OPTION, DEFAULT_STROKE_DISPLAY_SHOW)
 
     def set_stroke_display_on_top(self, b):
         self._set(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_ON_TOP_OPTION, b)
 
     def get_stroke_display_on_top(self):
-        return self._get_bool(STROKE_DISPLAY_SECTION, 
+        return self._get_bool(STROKE_DISPLAY_SECTION,
             STROKE_DISPLAY_ON_TOP_OPTION, DEFAULT_STROKE_DISPLAY_ON_TOP)
 
     def set_stroke_display_style(self, s):
         self._set(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_STYLE_OPTION, s)
 
     def get_stroke_display_style(self):
-        return self._get(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_STYLE_OPTION, 
+        return self._get(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_STYLE_OPTION,
                          DEFAULT_STROKE_DISPLAY_STYLE)
 
     def set_stroke_display_x(self, x):
         self._set(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_X_OPTION, x)
 
     def get_stroke_display_x(self):
-        return self._get_int(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_X_OPTION, 
+        return self._get_int(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_X_OPTION,
                              DEFAULT_STROKE_DISPLAY_X)
 
     def set_stroke_display_y(self, y):
         self._set(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_Y_OPTION, y)
 
     def get_stroke_display_y(self):
-        return self._get_int(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_Y_OPTION, 
+        return self._get_int(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_Y_OPTION,
                              DEFAULT_STROKE_DISPLAY_Y)
 
     def set_config_frame_x(self, x):
         self._set(CONFIG_FRAME_SECTION, CONFIG_FRAME_X_OPTION, x)
-        
+
     def get_config_frame_x(self):
         return self._get_int(CONFIG_FRAME_SECTION, CONFIG_FRAME_X_OPTION,
                              DEFAULT_CONFIG_FRAME_X)
 
     def set_config_frame_y(self, y):
         self._set(CONFIG_FRAME_SECTION, CONFIG_FRAME_Y_OPTION, y)
-    
+
     def get_config_frame_y(self):
         return self._get_int(CONFIG_FRAME_SECTION, CONFIG_FRAME_Y_OPTION,
                              DEFAULT_CONFIG_FRAME_Y)
@@ -266,7 +266,7 @@ class Config(object):
 
     def set_main_frame_x(self, x):
         self._set(MAIN_FRAME_SECTION, MAIN_FRAME_X_OPTION, x)
-    
+
     def get_main_frame_x(self):
         return self._get_int(MAIN_FRAME_SECTION, MAIN_FRAME_X_OPTION,
                              DEFAULT_MAIN_FRAME_X)
@@ -280,9 +280,9 @@ class Config(object):
 
     def set_translation_frame_x(self, x):
         self._set(TRANSLATION_FRAME_SECTION, TRANSLATION_FRAME_X_OPTION, x)
-    
+
     def get_translation_frame_x(self):
-        return self._get_int(TRANSLATION_FRAME_SECTION, 
+        return self._get_int(TRANSLATION_FRAME_SECTION,
                              TRANSLATION_FRAME_X_OPTION,
                              DEFAULT_TRANSLATION_FRAME_X)
 
@@ -290,15 +290,15 @@ class Config(object):
         self._set(TRANSLATION_FRAME_SECTION, TRANSLATION_FRAME_Y_OPTION, y)
 
     def get_translation_frame_y(self):
-        return self._get_int(TRANSLATION_FRAME_SECTION, 
+        return self._get_int(TRANSLATION_FRAME_SECTION,
                              TRANSLATION_FRAME_Y_OPTION,
                              DEFAULT_TRANSLATION_FRAME_Y)
-    
+
     def set_serial_config_frame_x(self, x):
         self._set(SERIAL_CONFIG_FRAME_SECTION, SERIAL_CONFIG_FRAME_X_OPTION, x)
-    
+
     def get_serial_config_frame_x(self):
-        return self._get_int(SERIAL_CONFIG_FRAME_SECTION, 
+        return self._get_int(SERIAL_CONFIG_FRAME_SECTION,
                              SERIAL_CONFIG_FRAME_X_OPTION,
                              DEFAULT_SERIAL_CONFIG_FRAME_X)
 
@@ -306,29 +306,29 @@ class Config(object):
         self._set(SERIAL_CONFIG_FRAME_SECTION, SERIAL_CONFIG_FRAME_Y_OPTION, y)
 
     def get_serial_config_frame_y(self):
-        return self._get_int(SERIAL_CONFIG_FRAME_SECTION, 
+        return self._get_int(SERIAL_CONFIG_FRAME_SECTION,
                              SERIAL_CONFIG_FRAME_Y_OPTION,
                              DEFAULT_SERIAL_CONFIG_FRAME_Y)
 
     def set_keyboard_config_frame_x(self, x):
-        self._set(KEYBOARD_CONFIG_FRAME_SECTION, KEYBOARD_CONFIG_FRAME_X_OPTION, 
+        self._set(KEYBOARD_CONFIG_FRAME_SECTION, KEYBOARD_CONFIG_FRAME_X_OPTION,
                   x)
-    
+
     def get_keyboard_config_frame_x(self):
-        return self._get_int(KEYBOARD_CONFIG_FRAME_SECTION, 
+        return self._get_int(KEYBOARD_CONFIG_FRAME_SECTION,
                              KEYBOARD_CONFIG_FRAME_X_OPTION,
                              DEFAULT_KEYBOARD_CONFIG_FRAME_X)
 
     def set_keyboard_config_frame_y(self, y):
-        self._set(KEYBOARD_CONFIG_FRAME_SECTION, KEYBOARD_CONFIG_FRAME_Y_OPTION, 
+        self._set(KEYBOARD_CONFIG_FRAME_SECTION, KEYBOARD_CONFIG_FRAME_Y_OPTION,
                   y)
 
     def get_keyboard_config_frame_y(self):
-        return self._get_int(KEYBOARD_CONFIG_FRAME_SECTION, 
+        return self._get_int(KEYBOARD_CONFIG_FRAME_SECTION,
                              KEYBOARD_CONFIG_FRAME_Y_OPTION,
                              DEFAULT_KEYBOARD_CONFIG_FRAME_Y)
-    
-    
+
+
     def _set(self, section, option, value):
         if not self._config.has_section(section):
             self._config.add_section(section)
@@ -354,7 +354,7 @@ class Config(object):
         except ValueError:
             pass
         return default
-        
+
 
 def _dict_entry_key(s):
     try:

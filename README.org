@@ -86,18 +86,18 @@ utilisée pour l'anglais.
 
 La disposition choisie pour le clavier Grandjean sera finalement la suivante :
 #+BEGIN_EXAMPLE
-             ___________________________________________________________
-            |TAB  | S | P | T | * | N |   |  O|  A|  I|  ᴎ|  D|   |Enter|
-            |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
-            |MAJ   |K  |M  |F  |R  |L  | Y | E | U | Ł | $ | C |   |  ⏎ |
-            |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
-            | ⇧  |   |   |   |   |  L|  Y|Y  |E  |   |   |   |⇧         |
-            |____|___|___|___|___|___|___|___|___|___|___|___|__________|
+        ___________________________________________________________
+       |TAB  | S | P | T | * | N |   |  O|  A|  I|  ᴎ|  D|   |Enter|
+       |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
+       |MAJ   |K  |M  |F  |R  |L  | Y | E | U | Ł | $ | C |   |  ⏎ |
+       |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
+       | ⇧  |   |   |   |   |  L|  Y|Y  |E  |   |   |   |⇧         |
+       |____|___|___|___|___|___|___|___|___|___|___|___|__________|
 #+END_EXAMPLE
 
 Il y en aurait ainsi pour tous les goûts. Pour les rigoristes et pour
 ceux qui, comme moi, trouvent que la sténotypie, c'est sympa, mais
-qu'il n y a pas de quoi se faire mal.
+qu'il n'y a pas de quoi se tordre les doigts.
 
 Le fichier d'information original du projet Plover, en anglais, est dénommé
 [[./_README.rst][_README.rst]].

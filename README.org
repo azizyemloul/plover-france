@@ -4,7 +4,7 @@
                  |___| P |___                           ___| ᴎ |___|
                  | K |___| T |___                   ___| I |___| C |
                  |___| M |___| * |___     _     ___| A |___| $ |___|
-                     |___| F |___| N |   / \   | O |___| Ł |___|
+                     |___| F |___| N |   / \   | O |___| £ |___|
                          |___| R |___|  /   \  |___| U |___|
                              |___| L | /  Y  \ | E |___|
                                  |___||       ||___|
@@ -13,7 +13,7 @@
                ___________________________________________________________
               |TAB  | S | P | T | * | N |   |  O|  A|  I|  ᴎ|  D|   |Enter|
               |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
-              |MAJ   |K  |M  |F  |R  |L  | Y | E | U | Ł | $ | C |   |  ⏎ |
+              |MAJ   |K  |M  |F  |R  |L  | Y | E | U | £ | $ | C |   |  ⏎ |
               |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
               | ⇧  |   |   |   |   |  L|  Y|Y  |E  |   |   |   |⇧         |
               |____|___|___|___|___|___|___|___|___|___|___|___|__________|
@@ -52,7 +52,7 @@ disposition schématique est la suivante :
             |___| P |___                           ___| ᴎ |___|
             | K |___| T |___                   ___| I |___| C |
             |___| M |___| * |___     _     ___| A |___| $ |___|
-                |___| F |___| N |   / \   | O |___| Ł |___|
+                |___| F |___| N |   / \   | O |___| £ |___|
                     |___| R |___|  /   \  |___| U |___|
                         |___| L | /  Y  \ | E |___|
                             |___||       ||___|
@@ -68,7 +68,7 @@ lignes de touches, ce qui nous aurait offert la disposition suivante :
          ___________________________________________________________
         |TAB  |  S|  P|  T|  *|  N|   |  O|  A|  I|  ᴎ|  D|   |Enter|
         |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
-        |MAJ   | K | M | F | R | L | Y | E | U | Ł | $ | C |   |  ⏎ |
+        |MAJ   | K | M | F | R | L | Y | E | U | £ | $ | C |   |  ⏎ |
         |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
         | ⇧  |   |   |   |   |   |   |   |   |   |   |   |⇧         |
         |____|___|___|___|___|___|___|___|___|___|___|___|__________|
@@ -89,7 +89,7 @@ La disposition choisie pour le clavier Grandjean sera finalement la suivante :
         ___________________________________________________________
        |TAB  | S | P | T | * | N |   |  O|  A|  I|  ᴎ|  D|   |Enter|
        |_____|___|___|___|___|___|___|___|___|___|___|___|___|     |
-       |MAJ   |K  |M  |F  |R  |L  | Y | E | U | Ł | $ | C |   |  ⏎ |
+       |MAJ   |K  |M  |F  |R  |L  | Y | E | U | £ | $ | C |   |  ⏎ |
        |______|___|___|___|___|___|___|___|___|___|___|___|___|____|
        | ⇧  |   |   |   |   |  L|  Y|Y  |E  |   |   |   |⇧         |
        |____|___|___|___|___|___|___|___|___|___|___|___|__________|
@@ -116,7 +116,7 @@ suivants, en anglais :
 *** Historique des interventions sur le code original
 - Ajout d'un clavier français <2013-11-22 ven.>
 - Changement de ~steno.py~, coeur du logiciel pour accepter les accords en français. <2013-11-22 ven.>
-- Changements expérimentaux sur orthography.py. <2013-11-28 jeu.>.
+- Changements expérimentaux sur ~orthography.py~. <2013-11-28 jeu.>.
 *** Reste à faire :
 - Améliorer orthography.py pour prendre en charge les règles orthographiques françaises.
 - Mettre en place le dictionnaire

@@ -114,7 +114,8 @@ suivants, en anglais :
 #  LocalWords:  Enhanced Bolt Treal Passport Plover-France Grandjean
 #  LocalWords:  blog wiki orthography.py steno.py LocalWords
 *** Historique des interventions sur le code original
-- Ajout d'un clavier français <2013-11-22 ven.>
+- Ajout d'un clavier français ~plover/machine/francais.py~.<2013-11-22 ven.>
+- Ajout d'une liste de mot français ~plover/assets/france_french_words.txt~. <2013-11-22 ven.>
 - Changement de ~steno.py~, coeur du logiciel pour accepter les accords en français. <2013-11-22 ven.>
 - Changements expérimentaux sur ~orthography.py~. <2013-11-28 jeu.>.
 *** Reste à faire :

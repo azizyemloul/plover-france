@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2011 Joshua Harlan Lifton.
+0;95;0c# Copyright (c) 2010-2011 Joshua Harlan Lifton.
 # See LICENSE.txt for details.
 
 """Configuration management."""
@@ -48,6 +48,10 @@ DEFAULT_STROKE_DISPLAY_X = -1
 STROKE_DISPLAY_Y_OPTION = 'y'
 DEFAULT_STROKE_DISPLAY_Y = -1
 
+OUTPUT_CONFIG_SECTION = 'Output Configuration'
+OUTPUT_CONFIG_SPACE_PLACEMENT_OPTION = 'space_placement'
+DEFAULT_OUTPUT_CONFIG_SPACE_PLACEMENT = 'Before Output'
+
 CONFIG_FRAME_SECTION = 'Config Frame'
 CONFIG_FRAME_X_OPTION = 'x'
 DEFAULT_CONFIG_FRAME_X = -1
@@ -69,6 +73,12 @@ TRANSLATION_FRAME_X_OPTION = 'x'
 DEFAULT_TRANSLATION_FRAME_X = -1
 TRANSLATION_FRAME_Y_OPTION = 'y'
 DEFAULT_TRANSLATION_FRAME_Y = -1
+
+LOOKUP_FRAME_SECTION = 'Lookup Frame'
+LOOKUP_FRAME_X_OPTION = 'x'
+DEFAULT_LOOKUP_FRAME_X = -1
+LOOKUP_FRAME_Y_OPTION = 'y'
+DEFAULT_LOOKUP_FRAME_Y = -1
 
 SERIAL_CONFIG_FRAME_SECTION = 'Serial Config Frame'
 SERIAL_CONFIG_FRAME_X_OPTION = 'x'
@@ -208,6 +218,13 @@ class Config(object):
         return self._get_bool(STROKE_DISPLAY_SECTION,
             STROKE_DISPLAY_SHOW_OPTION, DEFAULT_STROKE_DISPLAY_SHOW)
 
+    def get_space_placement(self):
+        return self._get(OUTPUT_CONFIG_SECTION, OUTPUT_CONFIG_SPACE_PLACEMENT_OPTION,
+                         DEFAULT_OUTPUT_CONFIG_SPACE_PLACEMENT)
+
+    def set_space_placement(self, s):
+        self._set(OUTPUT_CONFIG_SECTION, OUTPUT_CONFIG_SPACE_PLACEMENT_OPTION, s)
+
     def set_stroke_display_on_top(self, b):
         self._set(STROKE_DISPLAY_SECTION, STROKE_DISPLAY_ON_TOP_OPTION, b)
 
@@ -293,7 +310,27 @@ class Config(object):
         return self._get_int(TRANSLATION_FRAME_SECTION,
                              TRANSLATION_FRAME_Y_OPTION,
                              DEFAULT_TRANSLATION_FRAME_Y)
+# <<<<<<< HEAD
 
+# =======
+
+#     def set_lookup_frame_x(self, x):
+#         self._set(LOOKUP_FRAME_SECTION, LOOKUP_FRAME_X_OPTION, x)
+
+#     def get_lookup_frame_x(self):
+#         return self._get_int(LOOKUP_FRAME_SECTION,
+#                              LOOKUP_FRAME_X_OPTION,
+#                              DEFAULT_LOOKUP_FRAME_X)
+
+#     def set_lookup_frame_y(self, y):
+#         self._set(LOOKUP_FRAME_SECTION, LOOKUP_FRAME_Y_OPTION, y)
+
+#     def get_lookup_frame_y(self):
+#         return self._get_int(LOOKUP_FRAME_SECTION,
+#                              LOOKUP_FRAME_Y_OPTION,
+#                              DEFAULT_LOOKUP_FRAME_Y)
+
+# >>>>>>> 318dca0a57fbc4ecb11b7c3b33fe465db263b753
     def set_serial_config_frame_x(self, x):
         self._set(SERIAL_CONFIG_FRAME_SECTION, SERIAL_CONFIG_FRAME_X_OPTION, x)
 

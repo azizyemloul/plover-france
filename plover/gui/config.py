@@ -13,6 +13,7 @@ from wx.lib.scrolledpanel import ScrolledPanel
 import plover.config as conf
 from plover.gui.serial_config import SerialConfigDialog
 import plover.gui.add_translation
+import plover.gui.lookup
 from plover.app import update_engine
 from plover.machine.registry import machine_registry
 from plover.exception import InvalidConfigurationError
@@ -22,8 +23,10 @@ from plover.gui.keyboard_config import KeyboardConfigDialog
 
 ADD_TRANSLATION_BUTTON_NAME = "Add Translation"
 ADD_DICTIONARY_BUTTON_NAME = "Add Dictionary"
+LOOKUP_BUTTON_NAME = "Lookup"
 MACHINE_CONFIG_TAB_NAME = "Machine"
 DISPLAY_CONFIG_TAB_NAME = "Display"
+OUTPUT_CONFIG_TAB_NAME = "Output"
 DICTIONARY_CONFIG_TAB_NAME = "Dictionary"
 LOGGING_CONFIG_TAB_NAME = "Logging"
 SAVE_CONFIG_BUTTON_NAME = "Save"
@@ -34,6 +37,10 @@ LOG_STROKES_LABEL = "Log Strokes"
 LOG_TRANSLATIONS_LABEL = "Log Translations"
 LOG_FILE_DIALOG_TITLE = "Select a Log File"
 CONFIG_BUTTON_NAME = "Configure..."
+SPACE_PLACEMENTS_LABEL = "Space Placement:"
+SPACE_PLACEMENT_BEFORE = "Before Output"
+SPACE_PLACEMENT_AFTER = "After Output"
+SPACE_PLACEMENTS = [SPACE_PLACEMENT_BEFORE, SPACE_PLACEMENT_AFTER]
 CONFIG_PANEL_SIZE = (-1, -1)
 UI_BORDER = 4
 COMPONENT_SPACE = 3
@@ -89,12 +96,14 @@ class ConfigurationDialog(wx.Dialog):
                                                   notebook)
         self.logging_config = LoggingConfig(self.config, notebook)
         self.display_config = DisplayConfig(self.config, notebook)
+        self.output_config = OutputConfig(self.config, notebook)
 
         # Adding each tab
         notebook.AddPage(self.machine_config, MACHINE_CONFIG_TAB_NAME)
         notebook.AddPage(self.dictionary_config, DICTIONARY_CONFIG_TAB_NAME)
         notebook.AddPage(self.logging_config, LOGGING_CONFIG_TAB_NAME)
         notebook.AddPage(self.display_config, DISPLAY_CONFIG_TAB_NAME)
+        notebook.AddPage(self.output_config, OUTPUT_CONFIG_TAB_NAME)
 
         sizer.Add(notebook, proportion=1, flag=wx.EXPAND)
 
@@ -150,6 +159,7 @@ class ConfigurationDialog(wx.Dialog):
         self.dictionary_config.save()
         self.logging_config.save()
         self.display_config.save()
+        self.output_config.save()
 
         try:
             update_engine(self.engine, old_config, self.config)
@@ -282,9 +292,12 @@ class DictionaryConfig(ScrolledPanel):
         button.Bind(wx.EVT_BUTTON, self.show_add_translation)
         
         button = wx.Button(self, wx.ID_ANY, ADD_DICTIONARY_BUTTON_NAME)
-        button_sizer.Add(button, border=UI_BORDER, 
-                                 flag=wx.TOP | wx.BOTTOM | wx.RIGHT)
+        button_sizer.Add(button, border=UI_BORDER, flag=wx.ALL)
         button.Bind(wx.EVT_BUTTON, self.add_dictionary)
+
+        button = wx.Button(self, wx.ID_ANY, LOOKUP_BUTTON_NAME)
+        button_sizer.Add(button, border=UI_BORDER, flag=wx.ALL)
+        button.Bind(wx.EVT_BUTTON, self.show_lookup)
         
         main_sizer.Add(button_sizer)
         
@@ -310,6 +323,9 @@ class DictionaryConfig(ScrolledPanel):
         
     def show_add_translation(self, event):
         plover.gui.add_translation.Show(self, self.engine, self.config)
+
+    def show_lookup(self, event):
+        plover.gui.lookup.Show(self, self.engine, self.config)
         
     def add_dictionary(self, event):
         dlg = wx.FileDialog(self, "Choose a file", os.getcwd(), "", self.mask, 
@@ -459,3 +475,35 @@ class DisplayConfig(wx.Panel):
 
     def on_show_strokes(self, event):
         StrokeDisplayDialog.display(self.GetParent(), self.config)
+
+class OutputConfig(wx.Panel):
+
+    """Display configuration graphical user interface."""
+    def __init__(self, config, parent):
+        """Create a configuration component based on the given Config.
+
+        Arguments:
+
+        config -- A Config object.
+
+        parent -- This component's parent component.
+
+        """
+        wx.Panel.__init__(self, parent, size=CONFIG_PANEL_SIZE)
+        self.config = config
+        sizer = wx.BoxSizer(wx.VERTICAL)
+        
+        box = wx.BoxSizer(wx.HORIZONTAL)
+        box.Add(wx.StaticText(self, label=SPACE_PLACEMENTS_LABEL),
+                border=COMPONENT_SPACE,
+                flag=wx.ALIGN_RIGHT | wx.ALIGN_CENTER_VERTICAL | wx.RIGHT)
+        self.choice = wx.Choice(self, choices=SPACE_PLACEMENTS)
+        self.choice.SetStringSelection(self.config.get_space_placement())
+        box.Add(self.choice, proportion=1, flag=wx.EXPAND)
+        sizer.Add(box, border=UI_BORDER, flag=wx.ALL | wx.EXPAND)        
+
+        self.SetSizer(sizer)
+
+    def save(self):
+        """Write all parameters to the config."""
+        self.config.set_space_placement(self.choice.GetStringSelection())
